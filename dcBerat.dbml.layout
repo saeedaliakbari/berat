@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.625" name="dcBerat">
+  <DataContextMoniker Name="/dcBeratDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4bf365cb-deb1-48a4-980f-f3070cb1bceb" absoluteBounds="7.75, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/Bank" />
+      <nestedChildShapes>
+        <elementListCompartment Id="675c56ab-2d6d-48bd-a09d-7811c35c22cf" absoluteBounds="7.7650000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f506cea9-c2d2-4f6b-8910-6e1236fb87a8" absoluteBounds="2.75, 0.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/dcBeratDataContext/Berat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be099cce-f57f-46f5-ae50-7a7b2fb13806" absoluteBounds="2.765, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c08c7e3-daef-4604-b9c4-cff8574b7e84" absoluteBounds="5.25, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dcBeratDataContext/Factor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1abf5e96-7042-4f98-b4b4-1d8bfe20e7da" absoluteBounds="5.2650000000000006, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7123f4bd-507d-49a5-9ca5-0b3aaf11ddd6" absoluteBounds="5.25, 2.625, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/dcBeratDataContext/Motorkhane" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d625498-66bd-42d7-b51b-3d2575fddfd6" absoluteBounds="5.265, 3.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="311fe72f-6c54-4f11-9548-dcebb4b98b3d" absoluteBounds="7.75, 3.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/Price" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eaa0ee84-370d-4f0b-a17b-cc9936757e7b" absoluteBounds="7.7650000000000006, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="884775ea-8fc9-4ecd-abb3-2a17890a05c2" absoluteBounds="2.75, 3.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/TypeFactor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf7e2c5f-5a44-4d1b-a982-cfba77a4db9f" absoluteBounds="2.765, 4.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21efe2b3-bd7f-42ef-ac09-f1f5fccb6fa6" absoluteBounds="0.5, 3.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dcBeratDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83482d9b-4db8-414f-b982-b91ebc9f678d" absoluteBounds="0.51499999999999968, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbbd576e-b8df-4d2f-ae02-e9f97ebaf596" absoluteBounds="3, 5.125, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/dcBeratDataContext/ViewMotorkahneByBankName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60a8a12e-0502-4e48-8c58-3530d373c2d4" absoluteBounds="3.015, 5.585, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50e34056-a3dd-48bd-b53b-02466b93345f" absoluteBounds="7.75, 1.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/Ehteram" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b489cc0d-4263-4df8-a3bf-773d91eb123a" absoluteBounds="7.7650000000000006, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46fbb553-1b69-48a8-b9fd-6618f1d009be" absoluteBounds="5.25, 6.625, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dcBeratDataContext/ViewBeratByName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b358eff-bf8c-4896-9d21-f4556624c0a4" absoluteBounds="5.265, 7.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aac80bb3-c0c7-41f3-af45-f45f721f2995" absoluteBounds="0.625, 8.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/Babat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb33e1b7-aa0b-4c91-a389-c5f416ebd2ac" absoluteBounds="0.64000000000000012, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16db6401-12a4-4576-92c6-7b7dd6812e30" absoluteBounds="0.5, 5.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dcBeratDataContext/ViewMalekin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b91cd881-4468-4258-91a0-bc1a1081cfca" absoluteBounds="0.51499999999999968, 5.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f75cb0c8-2053-4c65-b478-9fc98c48d4f5" absoluteBounds="0.5, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dcBeratDataContext/Malekin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9154743f-d07a-4d74-95fc-ea95a0281d6e" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43ee9a3b-e44f-4dc7-a891-4cc879865e55" absoluteBounds="7.75, 4.625, 2, 3.6939111328125005">
+      <DataClassMoniker Name="/dcBeratDataContext/BeratMalek" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb316875-5592-42f6-aec1-50762c6c4baa" absoluteBounds="7.7650000000000006, 5.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a0f5014-4929-4815-ace7-4554ae928202" absoluteBounds="3, 9.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dcBeratDataContext/Mohlat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ad04a05-cf8b-4ea6-8d91-15ef027185cf" absoluteBounds="3.015, 9.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

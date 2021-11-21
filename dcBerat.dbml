@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BeratAj" Class="dcBeratDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=BeratAj;Integrated Security=True" SettingsObjectName="BeratAj.Properties.Settings" SettingsPropertyName="BeratAjConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bank" Member="Banks">
+    <Type Name="Bank" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameBank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Berat" Member="Berats">
+    <Type Name="Berat" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MotorKhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DatePrint" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DateMohlat" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PrintNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TedadMalek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Babat" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FactorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Factor" Member="Factors">
+    <Type Name="Factor" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FactorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateFactor" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DeptorPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreditorPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Motorkhane" Member="Motorkhanes">
+    <Type Name="Motorkhane" Id="ID3" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdBank" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Price" Member="Prices">
+    <Type Name="Price" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price" Member="Price1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeFactor" Member="TypeFactors">
+    <Type Name="TypeFactor" Modifier="Sealed">
+      <Column Name="FactorId" Type="System.Boolean" DbType="Bit NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User" Id="ID4" Modifier="Sealed">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PasswordId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewMotorkahneByBankName" Member="ViewMotorkahneByBankNames">
+    <Type Name="ViewMotorkahneByBankName" Id="ID2" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameBank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ehteram" Member="Ehterams">
+    <Type Name="Ehteram" Id="ID1" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ehteram" Member="Ehteram1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewBeratByName" Member="ViewBeratByNames">
+    <Type Name="ViewBeratByName" Id="ID6" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MotorKhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DatePrint" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DateMohlat" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PrintNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TedadMalek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceKol" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MinPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Babat" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FactorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Babats" Member="Babats">
+    <Type Name="Babat" Id="ID7" Modifier="Sealed">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Babats" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewMalekin" Member="ViewMalekins">
+    <Type Name="ViewMalekin" Id="ID5" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Malekin" Member="Malekins">
+    <Type Name="Malekin" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EhteramId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BeratMalek" Member="BeratMaleks">
+    <Type Name="BeratMalek" Id="ID8">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdBerat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Bedehi" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(12)" CanBeNull="false" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mohlat" Member="Mohlats">
+    <Type Name="Mohlat" Id="ID9" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Mohlat" Member="Mohlat1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CheckPass" Method="CheckPass">
+    <Parameter Name="check" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="pass" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckUser" Method="CheckUser">
+    <Parameter Name="check" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="user" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteBank" Method="DeleteBank">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteBerats" Method="DeleteBerats">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteEhteram" Method="DeleteEhteram">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteFactor" Method="DeleteFactor">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteFactorByFactorId" Method="DeleteFactorByFactorId">
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteMalek" Method="DeleteMalek">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteMotorkhane" Method="DeleteMotorkhane">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUser" Method="DeleteUser">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ExistMalekId" Method="ExistMalekId">
+    <Parameter Name="Exists" Parameter="exists" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ExistPrice" Method="ExistPrice">
+    <Parameter Name="Exist" Parameter="exist" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ExistUser" Method="ExistUser">
+    <Parameter Name="Exist" Parameter="exist" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ExistUsername" Method="ExistUsername">
+    <Parameter Name="Exist" Parameter="exist" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillBank" Method="FillBank">
+    <ElementType Name="FillBankResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameBank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillBankById" Method="FillBankById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillBankByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillEhteram" Method="FillEhteram">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.FillEhteramById" Method="FillEhteramById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.FillFactorById" Method="FillFactorById">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillFactorByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FactorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateFactor" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DeptorPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreditorPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillMalek" Method="FillMalek">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillMalekResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EhteramId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillMalekById" Method="FillMalekById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillMalekByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EhteramId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillMotorByBankName" Method="FillMotorByBankName">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID2" />
+  </Function>
+  <Function Name="dbo.FillMotorkhane" Method="FillMotorkhane">
+    <ElementType IdRef="ID3" />
+  </Function>
+  <Function Name="dbo.FillMotorkhaneById" Method="FillMotorkhaneById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillMotorkhaneByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdBank" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillUser" Method="FillUser">
+    <ElementType IdRef="ID4" />
+  </Function>
+  <Function Name="dbo.FillViewMalek" Method="FillViewMalek">
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillViewMalekResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillViewMalkin" Method="FillViewMalkin">
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillViewMalkinResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillViewMalkinAlphba" Method="FillViewMalkinAlphba">
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillViewMalkinAlphbaResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MalekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MotorkhaneId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ehteram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MinAb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecAb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Habe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillViewMotorkhane" Method="FillViewMotorkhane">
+    <ElementType Name="FillViewMotorkhaneResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameBank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FillViewMotorkhaneById" Method="FillViewMotorkhaneById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FillViewMotorkhaneByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameBank" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FilteMalekByName" Method="FilteMalekByName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID5" />
+  </Function>
+  <Function Name="dbo.FilterMotorkhaneByName" Method="FilterMotorkhaneByName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="FilterMotorkhaneByNameResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code4" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="CodeSahraei" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedarAb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MinKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HabeKol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdBank" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShomareHesab" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameMotesadi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="PhoneMotesadi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="NameMotorChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileMotorChi" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FilterViewBeratsByName" Method="FilterViewBeratsByName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType IdRef="ID6" />
+  </Function>
+  <Function Name="dbo.GetBankName" Method="GetBankName">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Bank" Parameter="bank" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetIdUserActive" Method="GetIdUserActive">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetMinKolMotor" Method="GetMinKolMotor">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MinKol" Parameter="minKol" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetPassAdmin" Method="GetPassAdmin">
+    <Parameter Name="Pass" Parameter="pass" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetPassUser" Method="GetPassUser">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Pass" Parameter="pass" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetPrice" Method="GetPrice">
+    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetSumMin" Method="GetSumMin">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Min" Parameter="min" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Sec" Parameter="sec" Type="System.Double" DbType="Float" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetSumTedadMalek" Method="GetSumTedadMalek">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SumMalek" Parameter="sumMalek" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertBank" Method="InsertBank">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertEhteram" Method="InsertEhteram">
+    <Parameter Name="Ehteram" Parameter="ehteram" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertFactorCreditor" Method="InsertFactorCreditor">
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DateFactor" Parameter="dateFactor" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="PriceCreditor" Parameter="priceCreditor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertFactorDeptor" Method="InsertFactorDeptor">
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DateFactor" Parameter="dateFactor" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="PriceDeptor" Parameter="priceDeptor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMalek" Method="InsertMalek">
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EhteramId" Parameter="ehteramId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MinAb" Parameter="minAb" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecAb" Parameter="secAb" Type="System.Double" DbType="Float" />
+    <Parameter Name="Habe" Parameter="habe" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CodeMelli" Parameter="codeMelli" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMotorkhane" Method="InsertMotorkhane">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Code4" Parameter="code4" Type="System.String" DbType="NVarChar(4)" />
+    <Parameter Name="CodeSahraei" Parameter="codeSahraei" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MedaAb" Parameter="medaAb" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MinKol" Parameter="minKol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HabeMin" Parameter="habeMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TedadHabe" Parameter="tedadHabe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdBank" Parameter="idBank" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShomareHesab" Parameter="shomareHesab" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NameMotesadi" Parameter="nameMotesadi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="MobileMotesadi" Parameter="mobileMotesadi" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="PhoneMotesadi" Parameter="phoneMotesadi" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="NameMotorchi" Parameter="nameMotorchi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="MobileMotorchi" Parameter="mobileMotorchi" Type="System.String" DbType="NVarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertPrice" Method="InsertPrice">
+    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertUser" Method="InsertUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateBank" Method="UpdateBank">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateBerat" Method="UpdateBerat">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DatePrint" Parameter="datePrint" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="DateMohlat" Parameter="dateMohlat" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="PrintNumber" Parameter="printNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TedadMalek" Parameter="tedadMalek" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceKol" Parameter="priceKol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MinPrice" Parameter="minPrice" Type="System.Double" DbType="Float" />
+    <Parameter Name="Babat" Parameter="babat" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceFactor" Parameter="priceFactor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateEhteram" Method="UpdateEhteram">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Ehteram" Parameter="ehteram" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateMalek" Method="UpdateMalek">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EhteramId" Parameter="ehteramId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MinAb" Parameter="minAb" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecAb" Parameter="secAb" Type="System.Double" DbType="Float" />
+    <Parameter Name="Habe" Parameter="habe" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CodeMelli" Parameter="codeMelli" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateMotorkhane" Method="UpdateMotorkhane">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Code4" Parameter="code4" Type="System.String" DbType="NVarChar(4)" />
+    <Parameter Name="CodeSahraei" Parameter="codeSahraei" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MedaAb" Parameter="medaAb" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MinKol" Parameter="minKol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HabeMin" Parameter="habeMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TedadHabe" Parameter="tedadHabe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdBank" Parameter="idBank" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShomareHesab" Parameter="shomareHesab" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NameMotesadi" Parameter="nameMotesadi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="MobileMotesadi" Parameter="mobileMotesadi" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="PhoneMotesadi" Parameter="phoneMotesadi" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="NameMotorchi" Parameter="nameMotorchi" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="MobileMotorchi" Parameter="mobileMotorchi" Type="System.String" DbType="NVarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdatePrice" Method="UpdatePrice">
+    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUser" Method="UpdateUser">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FilterViewMotorkhaneByName" Method="FilterViewMotorkhaneByName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType IdRef="ID2" />
+  </Function>
+  <Function Name="dbo.GetHabeMin" Method="GetHabeMin">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HabeMin" Parameter="habeMin" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertBerat" Method="InsertBerat">
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DatePrint" Parameter="datePrint" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="DateMohlat" Parameter="dateMohlat" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="PrintNumber" Parameter="printNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TedadMalek" Parameter="tedadMalek" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceKol" Parameter="priceKol" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MinPrice" Parameter="minPrice" Type="System.Double" DbType="Float" />
+    <Parameter Name="Babat" Parameter="babat" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PriceFactor" Parameter="priceFactor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetMaxNumFactor" Method="GetMaxNumFactor">
+    <Parameter Name="FactorId" Parameter="factorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillViewBerats" Method="FillViewBerats">
+    <ElementType IdRef="ID6" />
+  </Function>
+  <Function Name="dbo.DeleteBabat" Method="DeleteBabat">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillBabat" Method="FillBabat">
+    <ElementType IdRef="ID7" />
+  </Function>
+  <Function Name="dbo.InsertBabat" Method="InsertBabat">
+    <Parameter Name="Babat" Parameter="babat" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBalances" Method="GetBalances">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Balance" Parameter="balance" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetMalekById" Method="GetMalekById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <Parameter Name="Ehteram" Parameter="ehteram" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <Parameter Name="MinAb" Parameter="minAb" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="SecAb" Parameter="secAb" Type="System.Double" DbType="Float" Direction="InOut" />
+    <Parameter Name="Habe" Parameter="habe" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Parameter Name="CodeMelli" Parameter="codeMelli" Type="System.String" DbType="NVarChar(12)" Direction="InOut" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(13)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetMaxBeratId" Method="GetMaxBeratId">
+    <Parameter Name="BeratId" Parameter="beratId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillBeratMalek" Method="FillBeratMalek">
+    <Parameter Name="BeratId" Parameter="beratId" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID8" />
+  </Function>
+  <Function Name="dbo.UpdateBeratMalek" Method="UpdateBeratMalek">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Bedehi" Parameter="bedehi" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateBabat" Method="UpdateBabat">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="babat" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateBeratMalekBedehi" Method="UpdateBeratMalekBedehi">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Bedehi" Parameter="bedehi" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateMalekId" Method="UpdateMalekId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillMalekOrder" Method="FillMalekOrder">
+    <Parameter Name="MotorId" Parameter="motorId" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID5" />
+  </Function>
+  <Function Name="dbo.DeleteMelekin" Method="DeleteMelekin">
+    <Parameter Name="IdBerat" Parameter="idBerat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMalekBerat" Method="InsertMalekBerat">
+    <Parameter Name="IdBerat" Parameter="idBerat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MalekId" Parameter="malekId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MotorkhaneId" Parameter="motorkhaneId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Ehteram" Parameter="ehteram" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FatherName" Parameter="fatherName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MinAb" Parameter="minAb" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecAb" Parameter="secAb" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Habe" Parameter="habe" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Bedehi" Parameter="bedehi" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CodeMelli" Parameter="codeMelli" Type="System.String" DbType="NVarChar(12)" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(13)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteMohlat" Method="DeleteMohlat">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMohlat" Method="InsertMohlat">
+    <Parameter Name="Mohlat" Parameter="mohlat" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FillMohlat" Method="FillMohlat">
+    <ElementType IdRef="ID9" />
+  </Function>
+</Database>
