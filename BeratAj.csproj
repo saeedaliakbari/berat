@@ -255,6 +255,12 @@
     <Compile Include="frm_PrinListBerat.Designer.cs">
       <DependentUpon>frm_PrinListBerat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PrintListMotor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PrintListMotor.Designer.cs">
+      <DependentUpon>frm_PrintListMotor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SelectMotor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PrinListBerat.resx">
       <DependentUpon>frm_PrinListBerat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PrintListMotor.resx">
+      <DependentUpon>frm_PrintListMotor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SelectMotor.resx">
       <DependentUpon>frm_SelectMotor.cs</DependentUpon>

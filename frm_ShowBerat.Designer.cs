@@ -48,11 +48,11 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPrintListByName = new System.Windows.Forms.Button();
             this.btnPrinBeratList = new System.Windows.Forms.Button();
             this.BtnPrint = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsViewBerat)).BeginInit();
@@ -227,7 +227,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnPrintListByName);
             this.groupBox2.Controls.Add(this.btnPrinBeratList);
             this.groupBox2.Controls.Add(this.BtnPrint);
             this.groupBox2.Controls.Add(this.BtnExit);
@@ -239,6 +239,20 @@
             this.groupBox2.Size = new System.Drawing.Size(738, 59);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // btnPrintListByName
+            // 
+            this.btnPrintListByName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintListByName.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintListByName.Image")));
+            this.btnPrintListByName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintListByName.Location = new System.Drawing.Point(408, 17);
+            this.btnPrintListByName.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrintListByName.Name = "btnPrintListByName";
+            this.btnPrintListByName.Size = new System.Drawing.Size(145, 36);
+            this.btnPrintListByName.TabIndex = 3;
+            this.btnPrintListByName.Text = "لیست برات براساس موتورخانه";
+            this.btnPrintListByName.UseVisualStyleBackColor = true;
+            this.btnPrintListByName.Click += new System.EventHandler(this.btnPrintListByName_Click);
             // 
             // btnPrinBeratList
             // 
@@ -294,20 +308,6 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(408, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 36);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "لیست برات براساس موتورخانه";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnPrinBeratList_Click);
-            // 
             // frm_ShowBerat
             // 
             this.AcceptButton = this.BtnAdd;
@@ -361,6 +361,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn motorKhaneIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnPrinBeratList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrintListByName;
     }
 }

@@ -114,5 +114,10 @@ namespace BeratAj
         {
             new frm_PrinListBerat().ShowDialog();
         }
+
+        private void btnPrintListByName_Click(object sender, EventArgs e)
+        {
+            new frm_PrintListMotor().ShowDialog();
+        }
     }
 }
