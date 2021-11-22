@@ -726,6 +726,7 @@ namespace BeratAj
                 }
                 else
                 {
+                    //MessageBox.Show("مهلت پرداخت" + Mohlat);
                     //bsViewMalekin.DataSource = db.FillMalek(MotorId);
                     StiReport Report = new StiReport();
 

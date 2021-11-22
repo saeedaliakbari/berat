@@ -327,7 +327,7 @@ namespace BeratAj
         {
             frm_SelectReport.IntPrice = long.Parse(txtPrice.Text);
             frm_SelectReport.IntNum = int.Parse(txtNumPrint.Text);
-            frm_SelectReport.Mohlat = mskDatePardakht.Text;
+            frm_SelectReport.Mohlat = checkBox3.Checked?cmbMohlat.Text:mskDatePardakht.Text;
             frm_SelectReport.MotorId = (int)cmbMotor.SelectedValue;
             frm_SelectReport.PrintDate = mskDatePrint.Text;
             frm_SelectReport.Babat = cmbBabat.Text;
