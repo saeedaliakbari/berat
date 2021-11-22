@@ -262,7 +262,7 @@ namespace BeratAj
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBoxFarsi.Show("آیا این مالک حذف گردد؟", "اخطار", MessageBoxFarsiButtons.YesNo, MessageBoxFarsiIcon.Delete, MessageBoxFarsiDefaultButton.Button1) == DialogResult.Yes)
+            if (MessageBoxFarsi.Show("آیا مالک با مشخصات زیر حذف گردد؟"+"\n"+"شماره مالکیت"+ dataGridView1.CurrentRow.Cells[1].Value+" "+ dataGridView1.CurrentRow.Cells[5].Value + " " + dataGridView1.CurrentRow.Cells[3].Value + " " + dataGridView1.CurrentRow.Cells[4].Value , "اخطار", MessageBoxFarsiButtons.YesNo, MessageBoxFarsiIcon.Delete, MessageBoxFarsiDefaultButton.Button1) == DialogResult.Yes)
             {
                 db.DeleteMalek((int)dataGridView1.CurrentRow.Cells[0].Value);
                 txtName.Text = string.Empty;
