@@ -30,15 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SelectReport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtRptName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.btnMellat = new System.Windows.Forms.Button();
-            this.btnSaderat = new System.Windows.Forms.Button();
-            this.btnMelli = new System.Windows.Forms.Button();
-            this.btnKeshavarzi = new System.Windows.Forms.Button();
             this.btnPostBank = new System.Windows.Forms.Button();
-            this.btnTejarat = new System.Windows.Forms.Button();
-            this.btnSepah = new System.Windows.Forms.Button();
-            this.btnRefah = new System.Windows.Forms.Button();
             this.btnBank = new System.Windows.Forms.Button();
             this.btnBerat = new System.Windows.Forms.Button();
             this.btnMotesadi = new System.Windows.Forms.Button();
@@ -48,15 +43,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtRptName);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.BtnExit);
-            this.groupBox1.Controls.Add(this.btnMellat);
-            this.groupBox1.Controls.Add(this.btnSaderat);
-            this.groupBox1.Controls.Add(this.btnMelli);
-            this.groupBox1.Controls.Add(this.btnKeshavarzi);
             this.groupBox1.Controls.Add(this.btnPostBank);
-            this.groupBox1.Controls.Add(this.btnTejarat);
-            this.groupBox1.Controls.Add(this.btnSepah);
-            this.groupBox1.Controls.Add(this.btnRefah);
             this.groupBox1.Controls.Add(this.btnBank);
             this.groupBox1.Controls.Add(this.btnBerat);
             this.groupBox1.Controls.Add(this.btnMotesadi);
@@ -72,13 +62,32 @@
             this.groupBox1.Text = "انتخاب گزارش چاپ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtRptName
+            // 
+            this.txtRptName.Location = new System.Drawing.Point(170, 125);
+            this.txtRptName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRptName.Name = "txtRptName";
+            this.txtRptName.Size = new System.Drawing.Size(201, 27);
+            this.txtRptName.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(378, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "نام گزارش";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // BtnExit
             // 
             this.BtnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(8, 197);
+            this.BtnExit.Location = new System.Drawing.Point(170, 197);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(156, 36);
@@ -87,124 +96,25 @@
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // btnMellat
-            // 
-            this.btnMellat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMellat.Image = ((System.Drawing.Image)(resources.GetObject("btnMellat.Image")));
-            this.btnMellat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMellat.Location = new System.Drawing.Point(8, 154);
-            this.btnMellat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMellat.Name = "btnMellat";
-            this.btnMellat.Size = new System.Drawing.Size(156, 36);
-            this.btnMellat.TabIndex = 11;
-            this.btnMellat.Text = "بانک ملت";
-            this.btnMellat.UseVisualStyleBackColor = true;
-            this.btnMellat.Click += new System.EventHandler(this.btnMellat_Click);
-            // 
-            // btnSaderat
-            // 
-            this.btnSaderat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaderat.Image = ((System.Drawing.Image)(resources.GetObject("btnSaderat.Image")));
-            this.btnSaderat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaderat.Location = new System.Drawing.Point(8, 112);
-            this.btnSaderat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSaderat.Name = "btnSaderat";
-            this.btnSaderat.Size = new System.Drawing.Size(156, 36);
-            this.btnSaderat.TabIndex = 10;
-            this.btnSaderat.Text = "بانک صادرات";
-            this.btnSaderat.UseVisualStyleBackColor = true;
-            this.btnSaderat.Click += new System.EventHandler(this.btnSaderat_Click);
-            // 
-            // btnMelli
-            // 
-            this.btnMelli.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMelli.Image = ((System.Drawing.Image)(resources.GetObject("btnMelli.Image")));
-            this.btnMelli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMelli.Location = new System.Drawing.Point(8, 69);
-            this.btnMelli.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMelli.Name = "btnMelli";
-            this.btnMelli.Size = new System.Drawing.Size(156, 36);
-            this.btnMelli.TabIndex = 9;
-            this.btnMelli.Text = "بانک ملی";
-            this.btnMelli.UseVisualStyleBackColor = true;
-            this.btnMelli.Click += new System.EventHandler(this.btnMelli_Click);
-            // 
-            // btnKeshavarzi
-            // 
-            this.btnKeshavarzi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeshavarzi.Image = ((System.Drawing.Image)(resources.GetObject("btnKeshavarzi.Image")));
-            this.btnKeshavarzi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeshavarzi.Location = new System.Drawing.Point(8, 26);
-            this.btnKeshavarzi.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKeshavarzi.Name = "btnKeshavarzi";
-            this.btnKeshavarzi.Size = new System.Drawing.Size(156, 36);
-            this.btnKeshavarzi.TabIndex = 8;
-            this.btnKeshavarzi.Text = "بانک کشاورزی";
-            this.btnKeshavarzi.UseVisualStyleBackColor = true;
-            this.btnKeshavarzi.Click += new System.EventHandler(this.btnKeshavarzi_Click);
-            // 
             // btnPostBank
             // 
             this.btnPostBank.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPostBank.Image = ((System.Drawing.Image)(resources.GetObject("btnPostBank.Image")));
             this.btnPostBank.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPostBank.Location = new System.Drawing.Point(172, 154);
+            this.btnPostBank.Location = new System.Drawing.Point(57, 119);
             this.btnPostBank.Margin = new System.Windows.Forms.Padding(4);
             this.btnPostBank.Name = "btnPostBank";
-            this.btnPostBank.Size = new System.Drawing.Size(156, 36);
+            this.btnPostBank.Size = new System.Drawing.Size(105, 36);
             this.btnPostBank.TabIndex = 7;
-            this.btnPostBank.Text = "پست بانک";
+            this.btnPostBank.Text = "انتخاب";
             this.btnPostBank.UseVisualStyleBackColor = true;
             this.btnPostBank.Click += new System.EventHandler(this.btnPostBank_Click);
-            // 
-            // btnTejarat
-            // 
-            this.btnTejarat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTejarat.Image = ((System.Drawing.Image)(resources.GetObject("btnTejarat.Image")));
-            this.btnTejarat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTejarat.Location = new System.Drawing.Point(172, 112);
-            this.btnTejarat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTejarat.Name = "btnTejarat";
-            this.btnTejarat.Size = new System.Drawing.Size(156, 36);
-            this.btnTejarat.TabIndex = 6;
-            this.btnTejarat.Text = "بانک تجارت";
-            this.btnTejarat.UseVisualStyleBackColor = true;
-            this.btnTejarat.Click += new System.EventHandler(this.btnTejarat_Click);
-            // 
-            // btnSepah
-            // 
-            this.btnSepah.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSepah.Image = ((System.Drawing.Image)(resources.GetObject("btnSepah.Image")));
-            this.btnSepah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSepah.Location = new System.Drawing.Point(172, 69);
-            this.btnSepah.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSepah.Name = "btnSepah";
-            this.btnSepah.Size = new System.Drawing.Size(156, 36);
-            this.btnSepah.TabIndex = 5;
-            this.btnSepah.Text = "بانک سپه";
-            this.btnSepah.UseVisualStyleBackColor = true;
-            this.btnSepah.Click += new System.EventHandler(this.btnSepah_Click);
-            // 
-            // btnRefah
-            // 
-            this.btnRefah.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefah.Image = ((System.Drawing.Image)(resources.GetObject("btnRefah.Image")));
-            this.btnRefah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefah.Location = new System.Drawing.Point(172, 26);
-            this.btnRefah.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefah.Name = "btnRefah";
-            this.btnRefah.Size = new System.Drawing.Size(156, 36);
-            this.btnRefah.TabIndex = 4;
-            this.btnRefah.Text = "بانک رفاه کارگران";
-            this.btnRefah.UseVisualStyleBackColor = true;
-            this.btnRefah.Click += new System.EventHandler(this.btnRefah_Click);
             // 
             // btnBank
             // 
             this.btnBank.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBank.Image = ((System.Drawing.Image)(resources.GetObject("btnBank.Image")));
             this.btnBank.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBank.Location = new System.Drawing.Point(334, 154);
+            this.btnBank.Location = new System.Drawing.Point(57, 66);
             this.btnBank.Margin = new System.Windows.Forms.Padding(4);
             this.btnBank.Name = "btnBank";
             this.btnBank.Size = new System.Drawing.Size(156, 36);
@@ -218,7 +128,7 @@
             this.btnBerat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBerat.Image = ((System.Drawing.Image)(resources.GetObject("btnBerat.Image")));
             this.btnBerat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBerat.Location = new System.Drawing.Point(334, 112);
+            this.btnBerat.Location = new System.Drawing.Point(56, 26);
             this.btnBerat.Margin = new System.Windows.Forms.Padding(4);
             this.btnBerat.Name = "btnBerat";
             this.btnBerat.Size = new System.Drawing.Size(156, 36);
@@ -232,7 +142,7 @@
             this.btnMotesadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMotesadi.Image = ((System.Drawing.Image)(resources.GetObject("btnMotesadi.Image")));
             this.btnMotesadi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMotesadi.Location = new System.Drawing.Point(334, 69);
+            this.btnMotesadi.Location = new System.Drawing.Point(294, 66);
             this.btnMotesadi.Margin = new System.Windows.Forms.Padding(4);
             this.btnMotesadi.Name = "btnMotesadi";
             this.btnMotesadi.Size = new System.Drawing.Size(156, 36);
@@ -246,7 +156,7 @@
             this.btnAlephba.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlephba.Image = ((System.Drawing.Image)(resources.GetObject("btnAlephba.Image")));
             this.btnAlephba.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlephba.Location = new System.Drawing.Point(334, 26);
+            this.btnAlephba.Location = new System.Drawing.Point(294, 26);
             this.btnAlephba.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlephba.Name = "btnAlephba";
             this.btnAlephba.Size = new System.Drawing.Size(156, 36);
@@ -273,6 +183,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_SelectReport_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -284,14 +195,9 @@
         private System.Windows.Forms.Button btnBerat;
         private System.Windows.Forms.Button btnMotesadi;
         private System.Windows.Forms.Button btnAlephba;
-        private System.Windows.Forms.Button btnMellat;
-        private System.Windows.Forms.Button btnSaderat;
-        private System.Windows.Forms.Button btnMelli;
-        private System.Windows.Forms.Button btnKeshavarzi;
         private System.Windows.Forms.Button btnPostBank;
-        private System.Windows.Forms.Button btnTejarat;
-        private System.Windows.Forms.Button btnSepah;
-        private System.Windows.Forms.Button btnRefah;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.TextBox txtRptName;
+        private System.Windows.Forms.Label label1;
     }
 }

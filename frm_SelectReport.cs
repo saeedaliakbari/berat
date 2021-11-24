@@ -511,7 +511,7 @@ namespace BeratAj
                 {
                     StiReport Report = new StiReport();
 
-                    Report.Load("Reports/RptPstbankTak.mrt");
+                    Report.Load("Reports/"+txtRptName.Name);
                     Report.Compile();
 
                     Report["MotorkhaneId"] = MotorId;
@@ -541,7 +541,7 @@ namespace BeratAj
                     //bsViewMalekin.DataSource = db.FillMalek(MotorId);
                     StiReport Report = new StiReport();
 
-                    Report.Load("Reports/RptPstbank.mrt");
+                    Report.Load("Reports/"+txtRptName.Text);
                     Report.Compile();
 
                     Report["BeratId"] = BeratId;
@@ -560,7 +560,7 @@ namespace BeratAj
             }
             catch
             {
-                MessageBoxFarsi.Show("ارتباط با پایگاه داده قطع است", "اخطار", MessageBoxFarsiButtons.OK, MessageBoxFarsiIcon.Error, MessageBoxFarsiDefaultButton.Button1);
+                MessageBoxFarsi.Show("ارتباط با پایگاه داده قطع است یا نام گزارش اشتباه است", "اخطار", MessageBoxFarsiButtons.OK, MessageBoxFarsiIcon.Error, MessageBoxFarsiDefaultButton.Button1);
             }
         }
 
