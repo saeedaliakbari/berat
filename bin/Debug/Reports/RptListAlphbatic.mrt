@@ -1,0 +1,1316 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Berat Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Berat</Alias>
+        <ConnectionString>Integrated Security=True;Initial Catalog=BeratAj;Data Source=.</ConnectionString>
+        <Name>Berat</Name>
+      </Berat>
+    </Databases>
+    <DataSources isList="true" count="3">
+      <FillMotorkhaneById Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FillMotorkhaneById</Alias>
+        <Columns isList="true" count="15">
+          <value>Name,System.String</value>
+          <value>Code,System.String</value>
+          <value>Code4,System.String</value>
+          <value>CodeSahraei,System.String</value>
+          <value>MedarAb,System.String</value>
+          <value>MinKol,System.Int32</value>
+          <value>HabeMin,System.Int32</value>
+          <value>HabeKol,System.Int32</value>
+          <value>ShomareHesab,System.String</value>
+          <value>NameMotesadi,System.String</value>
+          <value>MobileMotesadi,System.String</value>
+          <value>PhoneMotesadi,System.String</value>
+          <value>NameMotorChi,System.String</value>
+          <value>MobileMotorChi,System.String</value>
+          <value>SahmMin,SahmMin,System.Double,PriceKol_x002F_FillMotorkhaneById.MinKol</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FillMotorkhaneById</Name>
+        <NameInSource>Berat</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>MotorkhaneId,MotorkhaneId,8,0</value>
+        </Parameters>
+        <SqlCommand>execute FillMotorkhaneById @MotorkhaneId</SqlCommand>
+      </FillMotorkhaneById>
+      <FillBeratMalek Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FillBeratMalek</Alias>
+        <Columns isList="true" count="16">
+          <value>MalekId,System.Int32</value>
+          <value>Name,System.String</value>
+          <value>Family,System.String</value>
+          <value>Ehteram,System.String</value>
+          <value>FatherName,System.String</value>
+          <value>MinAb,System.Int32</value>
+          <value>SecAb,System.Int32</value>
+          <value>Habe,System.String</value>
+          <value>Bedehi,System.Int64</value>
+          <value>Price,System.Int64</value>
+          <value>Horof,Horof,System.String,ToWordsFa_x0028_FillBeratMalek.Price_x0029_</value>
+          <value>CodeMelli,System.String</value>
+          <value>Mobile,System.String</value>
+          <value>Min,Min,System.Int32,FillBeratMalek.MinAb_x0025_60</value>
+          <value>Hour,Hour,System.Int32,FillBeratMalek.MinAb_x002F_60</value>
+          <value>SumMablagh,SumMablagh,System.Int64,SumI_x0028_FillBeratMalek_x002C_FillBeratMalek.Price_x0029_</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FillBeratMalek</Name>
+        <NameInSource>Berat</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>BeratId,BeratId,8,0</value>
+        </Parameters>
+        <SqlCommand>execute FillBeratMalek @BeratId</SqlCommand>
+      </FillBeratMalek>
+      <FillMotorByBankName Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>FillMotorByBankName</Alias>
+        <Columns isList="true" count="1">
+          <value>NameBank,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>FillMotorByBankName</Name>
+        <NameInSource>Berat</NameInSource>
+        <Parameters isList="true" count="1">
+          <value>id,MotorkhaneId,8,0</value>
+        </Parameters>
+        <SqlCommand>execute FillMotorByBankName @id</SqlCommand>
+      </FillMotorByBankName>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="8">
+      <value>,MotorkhaneId,MotorkhaneId,System.Int32,,False,False</value>
+      <value>,DateToday,DateToday,System.String,,False,False</value>
+      <value>,PrintNum,PrintNum,System.Int32,,False,False</value>
+      <value>,SumMalek,SumMalek,System.Int32,,False,False</value>
+      <value>,PriceKol,PriceKol,System.Int64,,False,False</value>
+      <value>,Min,Min,System.String,,False,False</value>
+      <value>,Sec,Sec,System.String,,False,False</value>
+      <value>,BeratId,BeratId,System.Int32,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="6" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="7" type="PageHeaderBand" isKey="true">
+          <Border>None;Black;2;Solid;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>0,0.4,20,2</ClientRectangle>
+          <Components isList="true" count="19">
+            <Text65 Ref="8" type="Text" isKey="true">
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent20,Black,White</Brush>
+              <ClientRectangle>0,0,20,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>a68d8757b2f345ba9bbd2d832357ee92</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text65>
+            <Text1 Ref="9" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.2,0.4,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>c958b3b8cfe344369a13d56fcd21cb86</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>لیست الفبایی تحویل برات مالکین</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="10" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.2,0,12,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>365c76fd4c504912a47c5b4a91bf5bad</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{FillMotorkhaneById.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="11" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>e673b607fbb141559c6bf9213504d486</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="12" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>3a0e9183e3a243008882a689f7cdf6e3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{DateToday}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="13" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0.4,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>26cdfa5e85964fdb8c703248083d14db</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>:صفحه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="14" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>6ae9d871c47a43df90268f3594480d47</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>{PageNumber}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="15" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>19,1.2,1,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>99e80b076f894a64a49eb812711ebe44</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>ردیف</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="16" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>18,1.2,1,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,7,Bold</Font>
+              <Guid>c0050584e646493c9c034eb4e5156d5a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>شماره مالک</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="17" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>12.6,1.2,5.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,7</Font>
+              <Guid>f5bea858903d4ca780b8bfa7b920d675</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>مشخصات   مالک    آب  موتور</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text13 Ref="18" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>7.4,1.2,5.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,7</Font>
+              <Guid>3adc04f315b34ee5b2427c908097412d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>سهـــــم</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text13>
+            <Text17 Ref="19" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>5,1.2,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,12</Font>
+              <Guid>7c5619f784224e9db641593563f98c1f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>مبلغ برات</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>0,1.2,5,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,7</Font>
+              <Guid>556679f36d744af5b671acd3733eabb4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>تحویل گیرنده
+امضا   مویابل    تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text18>
+            <Text10 Ref="21" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>16,1.6,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>538c986e038746138686c00ae306172d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>خانم/آقای     نام</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="22" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>12.6,1.6,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>c29f33b38db748e1b000fd26e449f12e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>نام پدر</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="23" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>14,1.6,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>3e9623b57b65495fab851ecd36dd0bf6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>نام خانوادگی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text14 Ref="24" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>11.2,1.6,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>0514e10f133a44059f9c6864aac9dfc2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>:دقیقه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="25" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,1.6,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>3ac811f78aea4456b671fe2ed02b66c1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>دقیقه==&gt;&gt;حبه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="26" type="Text" isKey="true">
+              <Border>Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>HatchBrush,Percent10,Black,White</Brush>
+              <ClientRectangle>10.6,1.6,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8</Font>
+              <Guid>51eb3ea10195443bb449d3296d2aba83</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>ساعت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>83551e179936491686af23203fa70d3e</Guid>
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </PageHeaderBand1>
+        <DataBand1 Ref="27" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,3.2,20,0.6</ClientRectangle>
+          <Components isList="true" count="17">
+            <Text19 Ref="28" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>19,0,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>22c1bf9fb92b42e080327423566db9c9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{Line}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="29" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18,0,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>558a1a8742664550965ad4c1007947e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.MalekId}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="30" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.2,0,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>629a7648da9746e39e621a9b18eadb77</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Ehteram}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="31" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>a1cc91b759fa489bba8e7c2eb376e87c</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="32" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>06cab84accb141e9adf61a03331822b2</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Family}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="33" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.6,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>fe638e9b1a874c2ebdbb3bcabcc77c58</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.FatherName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="34" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,0,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>4d1d4bc398e94d55bbf67d1924f19053</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Min}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="35" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.2,0,0.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>86a9b6bc8b444c439d78c2d97ad23a6c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="36" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>caab3ae5887a4250990104398c084193</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.MinAb}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="37" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0,0.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>fdb4d89c6fe94f94934cc6447a3d6c71</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Hour}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="38" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.2,0,0.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>9b2ff12612184fddbe480b48cc0801fd</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.SecAb}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="39" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>6f74c846dbb34130a1f230753a8b85d4</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Habe}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="40" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>0d4ad9366249492aa1ec1fa00d6459fb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.Price}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="41" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="42" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>905aeda8fbfd4fc2bf7fa689ca0ca4e6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="43" type="Text" isKey="true">
+              <Border>Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,0.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>9b769f92265f488daf0b8e47637fabce</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>{FillBeratMalek.SecAb}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="44" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,0.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>4875fcd8eebd4be6b9012b2cb4549c88</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>/</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text36 Ref="45" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0,0.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>27c689d986264e12815a1f8f3735b859</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="6" />
+              <Parent isRef="27" />
+              <Text>/</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>FillBeratMalek</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>58818cd8b2d947b4880a5aa598f2d7b1</Guid>
+          <Name>DataBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+          <Sort isList="true" count="6">
+            <value>ASC</value>
+            <value>Family</value>
+            <value>ASC</value>
+            <value>Name</value>
+            <value>ASC</value>
+            <value>FatherName</value>
+          </Sort>
+        </DataBand1>
+        <FooterBand1 Ref="46" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.6,20,5.8</ClientRectangle>
+          <Components isList="true" count="29">
+            <Text47 Ref="47" type="Text" isKey="true">
+              <Border>Right;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.4,0.6,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>1f9a0e5e5db347b6afa9a15568697046</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>متصدی گرامی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text47>
+            <Text35 Ref="48" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.6,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>d8fc721fb7084aa98fbf33ecf4dc9e73</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:تعداد مالک</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text37 Ref="49" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.2,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>6be72e2835d14fada6c45353f4de8246</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{SumMalek}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="50" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>47996a03227c4d5db0cd2903ae8881d5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:سهم هر دقیقه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="51" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.8,0,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>e4367f9c91204baea41247590124535a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.SahmMin}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="52" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="53" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>c11bec15ed47423795ec34de034edd72</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>ریال</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="54" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>d13a7c12d2f44c48a3104d31e0227774</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>جمع مبلغ برات</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="55" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.6,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>a5d0138ee9954b529c3257c5ea20a8d9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{PriceKol}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="56" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="57" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>a053f97fd94c4ac0b0ea57bc0efc1f78</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{Min}/{Sec}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="58" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>cfcd72eef4234ff0bfee881210f7b3fb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.HabeKol}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="59" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>4bae8c6e342446bb8f945f511b1d15b7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillBeratMalek.SumMablagh}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="60" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="61" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>2c64a94600294144b7290bf5e914b253</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text48 Ref="62" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14,0.6,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>61c861a414f5462a8d6d88db8f0dd41e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.NameMotesadi}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text48>
+            <Text49 Ref="63" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.6,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>93b168337c4b42b28769d9dbb4ca8e81</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.PhoneMotesadi}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text49>
+            <Text50 Ref="64" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,0.6,0.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>8a42d54573de46baabc40c29d1af695f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>و</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text50>
+            <Text51 Ref="65" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0.6,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>04d7130931f844d69f9c6b0feb5f6b72</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.MobileMotesadi}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text51>
+            <Text52 Ref="66" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.6,0.6,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>919698c1a3a648958474dfdf4bb50d46</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.Code4}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text52>
+            <Text54 Ref="67" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.6,0.6,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>376360f81cdf441f8a9a1300c648b4ef</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:شماره حساب</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text54>
+            <Text55 Ref="68" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,0.6,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>c53935f4960e47e0bd2e69be6bfcf153</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorkhaneById.ShomareHesab}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text55>
+            <Text56 Ref="69" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1,0.6,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>65a361b731df4f6a9b9b08edcafafb1c</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:چاپ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text56>
+            <Text57 Ref="70" type="Text" isKey="true">
+              <Border>Left;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>cf45c0804d8a4b3ca5dff0f2cd5b6c0d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{PrintNum}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text57>
+            <Text58 Ref="71" type="Text" isKey="true">
+              <Border>Left, Right;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>df21d738bd8542c5b5014997cf0f295b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>.لطفاً هرگونه خرید و فروشی را بدون خط زدگی دقیقه قبلی با علامت (+وـ) دقیقه خرید و فروش =دقیقه جدید اصلاح نمائید</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text59 Ref="72" type="Text" isKey="true">
+              <Border>Left, Right;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>3bf023819e1a4244b2d97ff8eeec35f5</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>.ضمناً هرگونه اشتباه در اسامی نیز بدون خط زدن اصلاح و نام پدر را بنویسید بهتر است در برات بعدی لیست را تحویل دهید</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text60 Ref="73" type="Text" isKey="true">
+              <Border>Left, Right;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>a75919c4a0294864bf1d3e0d088923db</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>.چون شماره مالکیت غیر قابل تغییر است از شماره های جا افتاده برای مالکین جدید استفاده خواهد شد. پیشنهادهای خود را اطلاع دهید</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text61 Ref="74" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.4,20,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>4a585194d22842a6aff3feae90046003</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>. ...تذکر:ممیز دقیقه براساس دقیقه است یعنی 0/25=15ثانیه ،0/33=20ثانیه،0/5=30ثانیه،0/67=40ثانیه،0/75=45ثانیه والی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text62 Ref="75" type="Text" isKey="true">
+              <Border>Left, Right;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.8,2.8,6.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>c0ea9fa20c75481c955a197284fa26ed</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:خواهشمند است برای برات آینده این قسمت را تکمیل کنید</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text62>
+            <Text63 Ref="76" type="Text" isKey="true">
+              <Border>Left, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,13.8,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>71b895c35b85462194230a35acb28d3d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>:مبلغ کل نفقه
+:بابت</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text64 Ref="77" type="Text" isKey="true">
+              <Border>Left, Right, Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4,20,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>c942c60b30914d58b4dd36fb43c6819d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>خدمات کامپیوتری آج انار تلفن:03434384621و03434384843وهمراه 09131925007 - علی اکبری</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text64>
+            <Text53 Ref="78" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0.6,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Zar,8,Bold</Font>
+              <Guid>b374a566d2d64f75ba3ca2a023113bd4</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="6" />
+              <Parent isRef="46" />
+              <Text>{FillMotorByBankName.NameBank}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text53>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>28393dd46b26423f99b832121a83a093</Guid>
+          <Name>FooterBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>b637cccc598a4c9e9ae58f5f51128075</Guid>
+      <LargeHeight>True</LargeHeight>
+      <Margins>0.5,0.5,0.5,0.5</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="79" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="80" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/2/2017 11:09:28 PM</ReportChanged>
+  <ReportCreated>8/5/2016 11:55:54 AM</ReportCreated>
+  <ReportFile>D:\MY  APP\BeratAj 2016\BeratAj\bin\Debug\Reports\RptListAlphbatic.mrt</ReportFile>
+  <ReportGuid>870fde217ae8414ca48c3be60995dd65</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.2.1304</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
