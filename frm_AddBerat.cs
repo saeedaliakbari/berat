@@ -31,6 +31,7 @@ namespace BeratAj
 
         string MablaghHorof = "";
         double MinPrice = 0;
+        double HrsPrice = 0;
 
         string strtoday = "";
         string bankname = "";
@@ -167,7 +168,7 @@ namespace BeratAj
                         dataGridView1.Rows[i].Cells[11].Value = Num2Text.ToFarsi(Mablagh);
 
                     }
-                    toolStripStatusLabel1.Text = "|" + "مجموع آب" + "=" + Min.ToString() + ":" + Sec.ToString() + " | " + "تعداد مالکین" + "=" + SumMalek.ToString() + " | " + "جمع آب موتورخانه" + "=" + MinKol.ToString() + " | " + "سهم هر دقیقه" + "=" + MinPrice.ToString() + " | " + "جمع مبلغ برات" + "=" + SumMablagh.ToString() + " | ";
+                    toolStripStatusLabel1.Text = "|" + "مجموع آب" + "=" + Min.ToString() + ":" + Sec.ToString() + " | " + "تعداد مالکین" + "=" + SumMalek.ToString() + " | " + "جمع آب موتورخانه" + "=" + MinKol.ToString() + " | " + "سهم هر دقیقه" + "=" + MinPrice.ToString("0,0") + " | " + "جمع مبلغ برات" + "=" + SumMablagh.ToString("0,0") + " | ";
                     //panel1.Text = "|" + "مجموع آب" + "=" + Min.ToString() + ":" + Sec.ToString() + " | " + "تعداد مالکین" + "=" + SumMalek.ToString() + " | " + "جمع آب موتورخانه" + "=" + MinKol.ToString() + " | " + "سهم هر دقیقه" + "=" + MinPrice.ToString() + " | " + "جمع مبلغ برات" + "=" + SumMablagh.ToString() + " | ";
                 }
             }
@@ -320,7 +321,20 @@ namespace BeratAj
         private void intPrice_ValueChanged(object sender, EventArgs e)
         {
             //txtPrice.Text= long.Parse(txtPrice.Text).ToString("#,##0");
-            lblPriceKol.Text = Num2Text.ToFarsi(long.Parse(txtPrice.Text)) + " " + "ریال";
+            try
+            {
+                lblPriceKol.Text = Num2Text.ToFarsi(long.Parse(txtPrice.Text)) + " " + "ریال";
+                lblPriceKol.ForeColor = Color.Black;
+                db.GetMinKolMotor((int)cmbMotor.SelectedValue, ref MinKol);
+                MinPrice = long.Parse(txtPrice.Text) / (int)MinKol;
+                HrsPrice = long.Parse(txtPrice.Text) / ((int)MinKol / 60);
+                lblMinPriceAndHrsPrice.Text = "قیمت هر دقیقه: " + MinPrice.ToString("0,0") + " ریال || قیمت هر ساعت: " + HrsPrice.ToString("0,0") +" ریال";
+            }
+            catch
+            {
+                lblPriceKol.Text = "خطا در ورودی داده ها";
+                lblPriceKol.ForeColor = Color.Red;
+            } 
         }
 
         private void BtnPrint_Click(object sender, EventArgs e)
@@ -411,6 +425,5 @@ namespace BeratAj
 
             Report.ShowWithRibbonGUI();
         }
-
     }
 }

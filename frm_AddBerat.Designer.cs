@@ -56,20 +56,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malekIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motorkhaneIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ehteramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minAbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secAbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.habeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SahmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HorofMablagh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeMelliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mobileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsViewMalekin = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtPardakht = new System.Windows.Forms.TextBox();
@@ -116,6 +102,21 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bsFactor = new System.Windows.Forms.BindingSource(this.components);
             this.bsBerat = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malekIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motorkhaneIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ehteramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minAbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secAbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.habeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SahmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorofMablagh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeMelliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMinPriceAndHrsPrice = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -181,6 +182,7 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lblMinPriceAndHrsPrice);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label1);
@@ -210,7 +212,7 @@
             // 
             // txtNumPrint
             // 
-            this.txtNumPrint.Location = new System.Drawing.Point(462, 224);
+            this.txtNumPrint.Location = new System.Drawing.Point(462, 252);
             this.txtNumPrint.Name = "txtNumPrint";
             this.txtNumPrint.Size = new System.Drawing.Size(127, 23);
             this.txtNumPrint.TabIndex = 6;
@@ -273,7 +275,7 @@
             this.cmbBabat.DataSource = this.bsBabats;
             this.cmbBabat.DisplayMember = "Babats";
             this.cmbBabat.FormattingEnabled = true;
-            this.cmbBabat.Location = new System.Drawing.Point(55, 258);
+            this.cmbBabat.Location = new System.Drawing.Point(55, 286);
             this.cmbBabat.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBabat.Name = "cmbBabat";
             this.cmbBabat.Size = new System.Drawing.Size(534, 24);
@@ -312,7 +314,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(598, 227);
+            this.label4.Location = new System.Drawing.Point(598, 255);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
@@ -334,7 +336,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(598, 261);
+            this.label2.Location = new System.Drawing.Point(598, 289);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 16);
@@ -435,116 +437,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(705, 272);
             this.dataGridView1.TabIndex = 0;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // malekIdDataGridViewTextBoxColumn
-            // 
-            this.malekIdDataGridViewTextBoxColumn.DataPropertyName = "MalekId";
-            this.malekIdDataGridViewTextBoxColumn.HeaderText = "شماره مالکیت";
-            this.malekIdDataGridViewTextBoxColumn.Name = "malekIdDataGridViewTextBoxColumn";
-            this.malekIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.malekIdDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // motorkhaneIdDataGridViewTextBoxColumn
-            // 
-            this.motorkhaneIdDataGridViewTextBoxColumn.DataPropertyName = "MotorkhaneId";
-            this.motorkhaneIdDataGridViewTextBoxColumn.HeaderText = "MotorkhaneId";
-            this.motorkhaneIdDataGridViewTextBoxColumn.Name = "motorkhaneIdDataGridViewTextBoxColumn";
-            this.motorkhaneIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.motorkhaneIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ehteramDataGridViewTextBoxColumn
-            // 
-            this.ehteramDataGridViewTextBoxColumn.DataPropertyName = "Ehteram";
-            this.ehteramDataGridViewTextBoxColumn.HeaderText = "احترام";
-            this.ehteramDataGridViewTextBoxColumn.Name = "ehteramDataGridViewTextBoxColumn";
-            this.ehteramDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ehteramDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "نام";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // familyDataGridViewTextBoxColumn
-            // 
-            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
-            this.familyDataGridViewTextBoxColumn.HeaderText = "نام خانوادگی";
-            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
-            this.familyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.familyDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // fatherNameDataGridViewTextBoxColumn
-            // 
-            this.fatherNameDataGridViewTextBoxColumn.DataPropertyName = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn.HeaderText = "نام پدر";
-            this.fatherNameDataGridViewTextBoxColumn.Name = "fatherNameDataGridViewTextBoxColumn";
-            this.fatherNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fatherNameDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // minAbDataGridViewTextBoxColumn
-            // 
-            this.minAbDataGridViewTextBoxColumn.DataPropertyName = "MinAb";
-            this.minAbDataGridViewTextBoxColumn.HeaderText = "دقیقه آب";
-            this.minAbDataGridViewTextBoxColumn.Name = "minAbDataGridViewTextBoxColumn";
-            this.minAbDataGridViewTextBoxColumn.ReadOnly = true;
-            this.minAbDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // secAbDataGridViewTextBoxColumn
-            // 
-            this.secAbDataGridViewTextBoxColumn.DataPropertyName = "SecAb";
-            this.secAbDataGridViewTextBoxColumn.HeaderText = "ثانیه آب";
-            this.secAbDataGridViewTextBoxColumn.Name = "secAbDataGridViewTextBoxColumn";
-            this.secAbDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secAbDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // habeDataGridViewTextBoxColumn
-            // 
-            this.habeDataGridViewTextBoxColumn.DataPropertyName = "Habe";
-            this.habeDataGridViewTextBoxColumn.HeaderText = "حبه";
-            this.habeDataGridViewTextBoxColumn.Name = "habeDataGridViewTextBoxColumn";
-            this.habeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.habeDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // SahmPrice
-            // 
-            this.SahmPrice.HeaderText = "مبلغ قابل پرداخت";
-            this.SahmPrice.Name = "SahmPrice";
-            this.SahmPrice.ReadOnly = true;
-            this.SahmPrice.Width = 70;
-            // 
-            // HorofMablagh
-            // 
-            this.HorofMablagh.HeaderText = "مبلغ به حروف";
-            this.HorofMablagh.Name = "HorofMablagh";
-            this.HorofMablagh.ReadOnly = true;
-            this.HorofMablagh.Width = 120;
-            // 
-            // codeMelliDataGridViewTextBoxColumn
-            // 
-            this.codeMelliDataGridViewTextBoxColumn.DataPropertyName = "CodeMelli";
-            this.codeMelliDataGridViewTextBoxColumn.HeaderText = "کدملی";
-            this.codeMelliDataGridViewTextBoxColumn.Name = "codeMelliDataGridViewTextBoxColumn";
-            this.codeMelliDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeMelliDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // mobileDataGridViewTextBoxColumn
-            // 
-            this.mobileDataGridViewTextBoxColumn.DataPropertyName = "Mobile";
-            this.mobileDataGridViewTextBoxColumn.HeaderText = "موبایل";
-            this.mobileDataGridViewTextBoxColumn.Name = "mobileDataGridViewTextBoxColumn";
-            this.mobileDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mobileDataGridViewTextBoxColumn.Width = 80;
-            // 
             // bsViewMalekin
             // 
             this.bsViewMalekin.DataSource = typeof(BeratAj.ViewMalekin);
@@ -568,7 +460,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(722, 325);
+            this.tabPage3.Size = new System.Drawing.Size(722, 332);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -620,7 +512,7 @@
             this.statusStrip2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2});
-            this.statusStrip2.Location = new System.Drawing.Point(4, 297);
+            this.statusStrip2.Location = new System.Drawing.Point(4, 304);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Padding = new System.Windows.Forms.Padding(18, 0, 1, 0);
             this.statusStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -749,7 +641,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(722, 325);
+            this.tabPage4.Size = new System.Drawing.Size(722, 332);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
@@ -1011,6 +903,126 @@
             // 
             this.bsBerat.DataSource = typeof(BeratAj.Berat);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // malekIdDataGridViewTextBoxColumn
+            // 
+            this.malekIdDataGridViewTextBoxColumn.DataPropertyName = "MalekId";
+            this.malekIdDataGridViewTextBoxColumn.HeaderText = "شماره مالکیت";
+            this.malekIdDataGridViewTextBoxColumn.Name = "malekIdDataGridViewTextBoxColumn";
+            this.malekIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.malekIdDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // motorkhaneIdDataGridViewTextBoxColumn
+            // 
+            this.motorkhaneIdDataGridViewTextBoxColumn.DataPropertyName = "MotorkhaneId";
+            this.motorkhaneIdDataGridViewTextBoxColumn.HeaderText = "MotorkhaneId";
+            this.motorkhaneIdDataGridViewTextBoxColumn.Name = "motorkhaneIdDataGridViewTextBoxColumn";
+            this.motorkhaneIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.motorkhaneIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ehteramDataGridViewTextBoxColumn
+            // 
+            this.ehteramDataGridViewTextBoxColumn.DataPropertyName = "Ehteram";
+            this.ehteramDataGridViewTextBoxColumn.HeaderText = "احترام";
+            this.ehteramDataGridViewTextBoxColumn.Name = "ehteramDataGridViewTextBoxColumn";
+            this.ehteramDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ehteramDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "نام";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // familyDataGridViewTextBoxColumn
+            // 
+            this.familyDataGridViewTextBoxColumn.DataPropertyName = "Family";
+            this.familyDataGridViewTextBoxColumn.HeaderText = "نام خانوادگی";
+            this.familyDataGridViewTextBoxColumn.Name = "familyDataGridViewTextBoxColumn";
+            this.familyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.familyDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // fatherNameDataGridViewTextBoxColumn
+            // 
+            this.fatherNameDataGridViewTextBoxColumn.DataPropertyName = "FatherName";
+            this.fatherNameDataGridViewTextBoxColumn.HeaderText = "نام پدر";
+            this.fatherNameDataGridViewTextBoxColumn.Name = "fatherNameDataGridViewTextBoxColumn";
+            this.fatherNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fatherNameDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // minAbDataGridViewTextBoxColumn
+            // 
+            this.minAbDataGridViewTextBoxColumn.DataPropertyName = "MinAb";
+            this.minAbDataGridViewTextBoxColumn.HeaderText = "دقیقه آب";
+            this.minAbDataGridViewTextBoxColumn.Name = "minAbDataGridViewTextBoxColumn";
+            this.minAbDataGridViewTextBoxColumn.ReadOnly = true;
+            this.minAbDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // secAbDataGridViewTextBoxColumn
+            // 
+            this.secAbDataGridViewTextBoxColumn.DataPropertyName = "SecAb";
+            this.secAbDataGridViewTextBoxColumn.HeaderText = "ممیز دقیقه";
+            this.secAbDataGridViewTextBoxColumn.Name = "secAbDataGridViewTextBoxColumn";
+            this.secAbDataGridViewTextBoxColumn.ReadOnly = true;
+            this.secAbDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // habeDataGridViewTextBoxColumn
+            // 
+            this.habeDataGridViewTextBoxColumn.DataPropertyName = "Habe";
+            this.habeDataGridViewTextBoxColumn.HeaderText = "حبه";
+            this.habeDataGridViewTextBoxColumn.Name = "habeDataGridViewTextBoxColumn";
+            this.habeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.habeDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // SahmPrice
+            // 
+            this.SahmPrice.HeaderText = "مبلغ قابل پرداخت";
+            this.SahmPrice.Name = "SahmPrice";
+            this.SahmPrice.ReadOnly = true;
+            this.SahmPrice.Width = 70;
+            // 
+            // HorofMablagh
+            // 
+            this.HorofMablagh.HeaderText = "مبلغ به حروف";
+            this.HorofMablagh.Name = "HorofMablagh";
+            this.HorofMablagh.ReadOnly = true;
+            this.HorofMablagh.Width = 120;
+            // 
+            // codeMelliDataGridViewTextBoxColumn
+            // 
+            this.codeMelliDataGridViewTextBoxColumn.DataPropertyName = "CodeMelli";
+            this.codeMelliDataGridViewTextBoxColumn.HeaderText = "کدملی";
+            this.codeMelliDataGridViewTextBoxColumn.Name = "codeMelliDataGridViewTextBoxColumn";
+            this.codeMelliDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeMelliDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // mobileDataGridViewTextBoxColumn
+            // 
+            this.mobileDataGridViewTextBoxColumn.DataPropertyName = "Mobile";
+            this.mobileDataGridViewTextBoxColumn.HeaderText = "موبایل";
+            this.mobileDataGridViewTextBoxColumn.Name = "mobileDataGridViewTextBoxColumn";
+            this.mobileDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mobileDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // lblMinPriceAndHrsPrice
+            // 
+            this.lblMinPriceAndHrsPrice.ForeColor = System.Drawing.Color.Blue;
+            this.lblMinPriceAndHrsPrice.Location = new System.Drawing.Point(55, 214);
+            this.lblMinPriceAndHrsPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinPriceAndHrsPrice.Name = "lblMinPriceAndHrsPrice";
+            this.lblMinPriceAndHrsPrice.Size = new System.Drawing.Size(537, 35);
+            this.lblMinPriceAndHrsPrice.TabIndex = 4;
+            this.lblMinPriceAndHrsPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frm_AddBerat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1108,20 +1120,6 @@
         private System.Windows.Forms.Button btnPriceBedehi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mobileDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeMelliDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HorofMablagh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SahmPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn habeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secAbDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn minAbDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ehteramDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motorkhaneIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn malekIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bedehiDataGridViewTextBoxColumn;
@@ -1146,5 +1144,20 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.ComboBox cmbMohlat;
         private System.Windows.Forms.BindingSource bsMohlat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malekIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motorkhaneIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ehteramDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn familyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fatherNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minAbDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secAbDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn habeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SahmPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorofMablagh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeMelliDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mobileDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblMinPriceAndHrsPrice;
     }
 }
