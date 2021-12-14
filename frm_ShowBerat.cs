@@ -72,12 +72,13 @@ namespace BeratAj
         {
             try
             {
+                int idBerat = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                int idFactor = (int)dataGridView1.CurrentRow.Cells[10].Value;
                 if (MessageBoxFarsi.Show("آیا برات  با مشخصات زیر حذف گردد؟"+"\n"+"موتورخانه "+ dataGridView1.CurrentRow.Cells[2].Value +"\n"+"شماره چاپ "+ dataGridView1.CurrentRow.Cells[5].Value + " تاریخ"+ dataGridView1.CurrentRow.Cells[3].Value, "حذف", MessageBoxFarsiButtons.YesNo, MessageBoxFarsiIcon.Delete, MessageBoxFarsiDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    
-                    db.DeleteBerats((int)dataGridView1.CurrentRow.Cells[0].Value, (int)dataGridView1.CurrentRow.Cells[10].Value);
+                    db.DeleteBerats(idBerat, idFactor);
                     //db.DeleteFactorByFactorId((int)dataGridView1.CurrentRow.Cells[10].Value);
-                    db.DeleteMelekin((int)dataGridView1.CurrentRow.Cells[0].Value);
+                    db.DeleteMelekin(idBerat);
                     bsViewBerat.DataSource = db.FillViewBerats();
                 }
             }
