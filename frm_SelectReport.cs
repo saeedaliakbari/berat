@@ -59,16 +59,25 @@ namespace BeratAj
 
         private void frm_SelectReport_Load(object sender, EventArgs e)
         {
-            if (IsTak)
+            try
             {
-                btnAlephba.Enabled = false;
-                btnMotesadi.Enabled = false;
+                bsReport.DataSource = db.FillReport();
+                if (IsTak)
+                {
+                    btnAlephba.Enabled = false;
+                    btnMotesadi.Enabled = false;
+                }
+                else
+                {
+                    btnAlephba.Enabled = true;
+                    btnMotesadi.Enabled = true;
+                }
             }
-            else
+            catch
             {
-                btnAlephba.Enabled = true;
-                btnMotesadi.Enabled = true;
+                MessageBoxFarsi.Show("ارتباط با پایگاه داده قطع است", "اخطار", MessageBoxFarsiButtons.OK, MessageBoxFarsiIcon.Error, MessageBoxFarsiDefaultButton.Button1);
             }
+
         }
 
         private void btnKeshavarzi_Click(object sender, EventArgs e)
@@ -511,7 +520,7 @@ namespace BeratAj
                 {
                     StiReport Report = new StiReport();
 
-                    Report.Load("Reports/"+txtRptName.Name);
+                    Report.Load("Reports/"+cmbReportAddress.Text);
                     Report.Compile();
 
                     Report["MotorkhaneId"] = MotorId;
@@ -541,7 +550,8 @@ namespace BeratAj
                     //bsViewMalekin.DataSource = db.FillMalek(MotorId);
                     StiReport Report = new StiReport();
 
-                    Report.Load("Reports/"+txtRptName.Text);
+                    Report.Load("Reports/"+cmbReportAddress.Text);
+                    //Report.Load("Reports/" + cmbReport.Selected);
                     Report.Compile();
 
                     Report["BeratId"] = BeratId;

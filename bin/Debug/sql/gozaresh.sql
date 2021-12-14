@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Gozaresh]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [name] NVARCHAR(MAX) NULL, 
+    [address] NVARCHAR(MAX) NULL
+)

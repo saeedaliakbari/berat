@@ -175,6 +175,13 @@
       <Column Name="Mohlat" Member="Mohlat1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Gozaresh" Member="Gozareshes">
+    <Type Name="Gozaresh" Id="ID10" Modifier="Sealed">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.CheckPass" Method="CheckPass">
     <Parameter Name="check" Type="System.Boolean" DbType="Bit" Direction="InOut" />
     <Parameter Name="pass" Type="System.String" DbType="NVarChar(50)" />
@@ -748,5 +755,23 @@
   </Function>
   <Function Name="dbo.FillMohlat" Method="FillMohlat">
     <ElementType IdRef="ID9" />
+  </Function>
+  <Function Name="dbo.FillReport" Method="FillReport">
+    <ElementType IdRef="ID10" />
+  </Function>
+  <Function Name="dbo.DeleteReport" Method="DeleteReport">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertReport" Method="InsertReport">
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateReport" Method="UpdateReport">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

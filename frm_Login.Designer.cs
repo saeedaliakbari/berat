@@ -59,7 +59,7 @@
             this.groupBox2.Size = new System.Drawing.Size(350, 59);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "نسخه 2.0.4 -1400/09/23";
+            this.groupBox2.Text = "نسخه 2.0.5 -1400/09/24";
             // 
             // BtnExit
             // 

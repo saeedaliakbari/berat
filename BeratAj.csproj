@@ -261,6 +261,12 @@
     <Compile Include="frm_PrintListMotor.Designer.cs">
       <DependentUpon>frm_PrintListMotor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Reports.Designer.cs">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SelectMotor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     <EmbeddedResource Include="frm_PrintListMotor.resx">
       <DependentUpon>frm_PrintListMotor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Reports.resx">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SelectMotor.resx">
       <DependentUpon>frm_SelectMotor.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +426,7 @@
     <None Include="Properties\DataSources\BeratMalek.datasource" />
     <None Include="Properties\DataSources\Ehteram.datasource" />
     <None Include="Properties\DataSources\Factor.datasource" />
+    <None Include="Properties\DataSources\Gozaresh.datasource" />
     <None Include="Properties\DataSources\Malekin.datasource" />
     <None Include="Properties\DataSources\Mohlat.datasource" />
     <None Include="Properties\DataSources\Motorkhane.datasource" />

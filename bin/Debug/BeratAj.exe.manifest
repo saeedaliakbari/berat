@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BeratAj.exe" size="421888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BeratAj.exe" size="436224">
       <assemblyIdentity name="BeratAj" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DGzma7CBOLknQ37myeMRKC8RTvQ=</dsig:DigestValue>
+        <dsig:DigestValue>2DlyD4/ED/vodS0Jv93G2o+oMVU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KQhQkMxz2UFDUGB12zQQ0PBLcAQ=</dsig:DigestValue>
+        <dsig:DigestValue>H3RuOL6TNUolRknkAdGCaLPz6hs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

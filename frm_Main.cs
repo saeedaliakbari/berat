@@ -270,5 +270,10 @@ namespace BeratAj
         {
             new frm_Mohlats().ShowDialog();
         }
+
+        private void گزارشToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_Reports().ShowDialog();
+        }
     }
 }

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SelectReport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtRptName = new System.Windows.Forms.TextBox();
+            this.cmbReportAddress = new System.Windows.Forms.ComboBox();
+            this.bsReport = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbReport = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnExit = new System.Windows.Forms.Button();
             this.btnPostBank = new System.Windows.Forms.Button();
@@ -38,12 +41,16 @@
             this.btnBerat = new System.Windows.Forms.Button();
             this.btnMotesadi = new System.Windows.Forms.Button();
             this.btnAlephba = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtRptName);
+            this.groupBox1.Controls.Add(this.cmbReportAddress);
+            this.groupBox1.Controls.Add(this.cmbReport);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.BtnExit);
             this.groupBox1.Controls.Add(this.btnPostBank);
@@ -62,13 +69,34 @@
             this.groupBox1.Text = "انتخاب گزارش چاپ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtRptName
+            // cmbReportAddress
             // 
-            this.txtRptName.Location = new System.Drawing.Point(170, 125);
-            this.txtRptName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRptName.Name = "txtRptName";
-            this.txtRptName.Size = new System.Drawing.Size(201, 27);
-            this.txtRptName.TabIndex = 13;
+            this.cmbReportAddress.DataSource = this.bsReport;
+            this.cmbReportAddress.DisplayMember = "address";
+            this.cmbReportAddress.FormattingEnabled = true;
+            this.cmbReportAddress.Location = new System.Drawing.Point(170, 162);
+            this.cmbReportAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbReportAddress.Name = "cmbReportAddress";
+            this.cmbReportAddress.Size = new System.Drawing.Size(201, 27);
+            this.cmbReportAddress.TabIndex = 16;
+            this.cmbReportAddress.ValueMember = "Id";
+            this.cmbReportAddress.Visible = false;
+            // 
+            // bsReport
+            // 
+            this.bsReport.DataSource = typeof(BeratAj.Gozaresh);
+            // 
+            // cmbReport
+            // 
+            this.cmbReport.DataSource = this.bsReport;
+            this.cmbReport.DisplayMember = "name";
+            this.cmbReport.FormattingEnabled = true;
+            this.cmbReport.Location = new System.Drawing.Point(170, 125);
+            this.cmbReport.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbReport.Name = "cmbReport";
+            this.cmbReport.Size = new System.Drawing.Size(201, 27);
+            this.cmbReport.TabIndex = 15;
+            this.cmbReport.ValueMember = "Id";
             // 
             // label1
             // 
@@ -165,6 +193,10 @@
             this.btnAlephba.UseVisualStyleBackColor = true;
             this.btnAlephba.Click += new System.EventHandler(this.btnAlephba_Click);
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(BeratAj.Babat);
+            // 
             // frm_SelectReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -184,6 +216,8 @@
             this.Load += new System.EventHandler(this.frm_SelectReport_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +231,10 @@
         private System.Windows.Forms.Button btnAlephba;
         private System.Windows.Forms.Button btnPostBank;
         private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.TextBox txtRptName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bsReport;
+        private System.Windows.Forms.ComboBox cmbReport;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ComboBox cmbReportAddress;
     }
 }

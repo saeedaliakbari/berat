@@ -58,6 +58,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.گزارشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +84,8 @@
             this.احترامToolStripMenuItem,
             this.بانکToolStripMenuItem,
             this.بابتToolStripMenuItem,
-            this.مهلتToolStripMenuItem});
+            this.مهلتToolStripMenuItem,
+            this.گزارشToolStripMenuItem});
             this.معرفیToolStripMenuItem.Name = "معرفیToolStripMenuItem";
             resources.ApplyResources(this.معرفیToolStripMenuItem, "معرفیToolStripMenuItem");
             // 
@@ -254,6 +256,12 @@
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
+            // گزارشToolStripMenuItem
+            // 
+            resources.ApplyResources(this.گزارشToolStripMenuItem, "گزارشToolStripMenuItem");
+            this.گزارشToolStripMenuItem.Name = "گزارشToolStripMenuItem";
+            this.گزارشToolStripMenuItem.Click += new System.EventHandler(this.گزارشToolStripMenuItem_Click);
+            // 
             // frm_Main
             // 
             resources.ApplyResources(this, "$this");
@@ -306,5 +314,6 @@
         private System.Windows.Forms.ToolStripMenuItem بابتToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem مهلتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem گزارشToolStripMenuItem;
     }
 }
